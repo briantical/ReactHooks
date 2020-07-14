@@ -12,7 +12,13 @@
     "type": "git",
     "url": "git+https://github.com/briantical/ReactHooks.git"
   },
-  "keywords": ["React", "Hooks", "Jest", "Eslint", "CircleCi"],
+  "keywords": [
+    "React",
+    "Hooks",
+    "Jest",
+    "Eslint",
+    "CircleCi"
+  ],
   "author": "Brian Ivan Lutaaya",
   "license": "MIT",
   "bugs": {
@@ -25,6 +31,8 @@
     "react-dom": "^16.13.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-react": "^7.10.4",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
