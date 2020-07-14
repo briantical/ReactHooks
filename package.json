@@ -1,0 +1,40 @@
+{
+  "name": "reacthooks",
+  "version": "1.0.0",
+  "description": "A todolist built using ReactJS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm run test -- --watch",
+    "start": "parcel watch public/index.html --open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/briantical/ReactHooks.git"
+  },
+  "keywords": ["React", "Hooks", "Jest", "Eslint", "CircleCi"],
+  "author": "Brian Ivan Lutaaya",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/briantical/ReactHooks/issues"
+  },
+  "homepage": "https://github.com/briantical/ReactHooks#readme",
+  "dependencies": {
+    "axios": "^0.19.2",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "eslint": "^7.4.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.22.0",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.3",
+    "eslint-plugin-react-hooks": "^4.0.8",
+    "jest": "^26.1.0",
+    "parcel-bundler": "^1.12.4"
+  }
+}
