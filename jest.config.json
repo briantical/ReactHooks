@@ -1,3 +1,6 @@
 {
-  "testRegex": "((\\.|/*.)(spec))\\.js?$"
+  "testRegex": "((\\.|/*.)(spec))\\.js?$",
+  "collectCoverage": true,
+  "coverageReporters": ["lcov"],
+  "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"]
 }
