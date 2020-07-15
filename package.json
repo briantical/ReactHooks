@@ -6,19 +6,13 @@
   "scripts": {
     "test": "jest --config ./jest.config.json",
     "test:watch": "npm run test -- --watch",
-    "start": "parcel watch public/index.html --open"
+    "start": "parcel public/index.html --open"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/briantical/ReactHooks.git"
   },
-  "keywords": [
-    "React",
-    "Hooks",
-    "Jest",
-    "Eslint",
-    "CircleCi"
-  ],
+  "keywords": ["React", "Hooks", "Jest", "Eslint", "CircleCi"],
   "author": "Brian Ivan Lutaaya",
   "license": "MIT",
   "bugs": {
