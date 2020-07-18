@@ -24,7 +24,6 @@ jobs:
                 command: |
                   ./cc-test-reporter after-build -t lcov
                 when: always
-
 workflows:
   build-and-test:
     jobs:

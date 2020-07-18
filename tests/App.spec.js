@@ -1,5 +1,5 @@
-import todosReducer from './../src/context/todosReducer';
-import { ADD_TODO, EDIT_TODO, REMOVE_TODO, SET_ERROR, SET_TODOS } from './../src/context/todoActionTypes';
+import todosReducer from '../src/context/todosReducer';
+import { ADD_TODO, EDIT_TODO, REMOVE_TODO, SET_ERROR, SET_TODOS } from '../src/context/todoActionTypes';
 
 const todo = {
   userId: 1,
@@ -47,32 +47,65 @@ const newtodo = {
 
 describe('Test the todoreducer functions', () => {
   it('Add new todos', () => {
-    const state = { todos: [], error: null };
-    const action = { type: SET_TODOS, payload: todos };
+    const state = {
+      todos: [],
+      error: null
+    };
+    const action = {
+      type: SET_TODOS,
+      payload: todos
+    };
     const newState = todosReducer(state, action);
 
-    expect(newState).toEqual({ todos, error: null });
+    expect(newState).toEqual({
+      todos,
+      error: null
+    });
   });
 
   it('A new todo should added', () => {
-    const state = { todos: todos, error: null };
-    const action = { type: ADD_TODO, payload: todo };
+    const state = {
+      todos,
+      error: null
+    };
+    const action = {
+      type: ADD_TODO,
+      payload: todo
+    };
     const newState = todosReducer(state, action);
 
-    expect(newState).toEqual({ todos: [...todos, todo], error: null });
+    expect(newState).toEqual({
+      todos: [...todos, todo],
+      error: null
+    });
   });
 
   it('Should edit the todo', () => {
-    const state = { todos: todos, error: null };
-    const action = { type: EDIT_TODO, payload: newtodo };
+    const state = {
+      todos,
+      error: null
+    };
+    const action = {
+      type: EDIT_TODO,
+      payload: newtodo
+    };
     const newState = todosReducer(state, action);
 
-    expect(newState).toEqual({ todos: newtodos, error: null });
+    expect(newState).toEqual({
+      todos: newtodos,
+      error: null
+    });
   });
 
   it('Should delete the todo', () => {
-    const state = { todos: todos, error: null };
-    const action = { type: REMOVE_TODO, payload: 1 };
+    const state = {
+      todos,
+      error: null
+    };
+    const action = {
+      type: REMOVE_TODO,
+      payload: 1
+    };
     const newState = todosReducer(state, action);
 
     expect(newState).toEqual({
@@ -89,8 +122,14 @@ describe('Test the todoreducer functions', () => {
   });
 
   it('Should return error', () => {
-    const state = { todos: [todo], error: null };
-    const action = { type: SET_ERROR, payload: 'Some error' };
+    const state = {
+      todos: [todo],
+      error: null
+    };
+    const action = {
+      type: SET_ERROR,
+      payload: 'Some error'
+    };
     const newState = todosReducer(state, action);
 
     expect(newState.error).toBeTruthy();
