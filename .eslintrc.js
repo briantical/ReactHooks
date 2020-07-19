@@ -24,6 +24,7 @@ module.exports = {
     ],
     'comma-dangle': [2, 'never'],
     'object-curly-newline': [
+      2,
       'error',
       {
         ObjectExpression: 'always',
