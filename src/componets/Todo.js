@@ -6,7 +6,7 @@ export default function Todo(props) {
   const { title, completed, userId, id } = props;
   const [complete, setComplete] = useState(completed);
   const [todo, setTodo] = useState(title);
-  const { tasks, dispatch } = useContext(TodoContext);
+  // const { todos, dispatch } = useContext(TodoContext);
 
   const completeTodo = () => {
     setComplete(!complete);
@@ -17,7 +17,7 @@ export default function Todo(props) {
   };
 
   const setNewTodo = () => {
-    dispatch({ type: EDIT_TODO, payload: { id, userId, completed: complete, title: todo } });
+    // dispatch({ type: EDIT_TODO, payload: { id, userId, completed: complete, title: todo } });
   };
   return (
     <div>
