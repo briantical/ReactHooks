@@ -3,9 +3,5 @@
   "collectCoverage": true,
   "coverageReporters": ["lcov"],
   "collectCoverageFrom": ["src/**/*.{js,jsx,ts,tsx}"],
-  "setupFilesAfterEnv": ["jest-enzyme"],
-  "testEnvironment": "enzyme",
-  "testEnvironmentOptions": {
-    "enzymeAdapter": "react16"
-  }
+  "setupFilesAfterEnv": ["<rootDir>/src/setupTests.js"]
 }

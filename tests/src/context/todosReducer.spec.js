@@ -1,5 +1,5 @@
-import todosReducer from '../src/context/todosReducer';
-import { ADD_TODO, EDIT_TODO, REMOVE_TODO, SET_ERROR, SET_TODOS } from '../src/context/todoActionTypes';
+import todosReducer from '../../../src/context/todosReducer';
+import { ADD_TODO, EDIT_TODO, REMOVE_TODO, SET_ERROR, SET_TODOS } from '../../../src/context/todoActionTypes';
 
 const todo = {
   userId: 1,
@@ -45,7 +45,7 @@ const newtodo = {
   completed: true
 };
 
-describe('Test the todoreducer functions', () => {
+describe('Todoreducer functions', () => {
   it('Add new todos', () => {
     const state = {
       todos: [],
