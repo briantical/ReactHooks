@@ -22,21 +22,6 @@ module.exports = {
         extensions: ['.js', '.jsx']
       }
     ],
-    'comma-dangle': [2, 'never'],
-    'object-curly-newline': [
-      2,
-      'error',
-      {
-        ObjectExpression: 'always',
-        ObjectPattern: {
-          multiline: true
-        },
-        ImportDeclaration: 'never',
-        ExportDeclaration: {
-          multiline: true,
-          minProperties: 3
-        }
-      }
-    ]
+    'comma-dangle': [2, 'never']
   }
 };
