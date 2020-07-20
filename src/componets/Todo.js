@@ -1,6 +1,6 @@
 import React, { useState, useContext } from 'react';
 import { TodoContext } from '../context/TodoContext';
-import { EDIT_TODO } from '../context/todoActionTypes';
+import { EDIT_TODO, REMOVE_TODO } from '../context/todoActionTypes';
 
 export default function Todo(props) {
   const { title, completed, userId, id } = props;
@@ -10,6 +10,10 @@ export default function Todo(props) {
   const completeTodo = () => {
     setComplete(!complete);
     dispatch({ type: EDIT_TODO, payload: { id, userId, completed: complete, title } });
+  };
+
+  const removeTodo = (id) => {
+    dispatch({ type: REMOVE_TODO, payload: id });
   };
 
   return (
@@ -25,8 +29,8 @@ export default function Todo(props) {
           checked={complete}
           onChange={completeTodo}
         />
-        <button className="delete-todo" data-test="delete-todo">
-          Edit
+        <button className="delete-todo" data-test="delete-todo" onClick={() => removeTodo(id)}>
+          Delete
         </button>
       </div>
     </div>
