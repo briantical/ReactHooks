@@ -119,6 +119,7 @@ describe('Todoreducer functions', () => {
       ],
       error: null
     });
+    expect(newState.todos.length).toEqual(todos.length - 1);
   });
 
   it('Should return error', () => {

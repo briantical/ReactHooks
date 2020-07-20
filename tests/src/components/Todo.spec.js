@@ -1,9 +1,14 @@
 import React from 'react';
-import { shallow } from 'enzyme';
+import { mount } from 'enzyme';
 import Todo from '../../../src/componets/Todo';
+import TodoContextProvider from '../../../src/context/TodoContext';
 
 const setUp = (props) => {
-  const wrapper = shallow(<Todo {...props} />);
+  const wrapper = mount(
+    <TodoContextProvider>
+      <Todo {...props} />
+    </TodoContextProvider>
+  );
   return wrapper;
 };
 
@@ -23,11 +28,11 @@ describe('Todo Component', () => {
     expect(todotask.text()).toEqual('Checkout github');
   });
 
-  it('should render edit button', () => {
+  it('should render delete button', () => {
     const wrapper = setUp();
-    const editBtn = wrapper.find(`[data-test='edit-todo']`);
+    const deleteBtn = wrapper.find(`[data-test='delete-todo']`);
 
-    expect(editBtn.length).toBe(1);
+    expect(deleteBtn.length).toBe(1);
   });
 
   it('Should render a complete checkbox', () => {
