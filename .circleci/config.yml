@@ -28,7 +28,7 @@ jobs:
                 name: Send coverage report to CodeCov
                 command: |
                   bash <(curl -s https://codecov.io/bash)
-                  when: always
+                when: always
 workflows:
   build-and-test:
     jobs:
