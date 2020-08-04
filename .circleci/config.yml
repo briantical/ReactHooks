@@ -24,6 +24,11 @@ jobs:
                 command: |
                   ./cc-test-reporter after-build -t lcov
                 when: always
+            - run:
+                name: Send coverage report to CodeCov
+                command: |
+                  bash <(curl -s https://codecov.io/bash)
+                  when: always
 workflows:
   build-and-test:
     jobs:
